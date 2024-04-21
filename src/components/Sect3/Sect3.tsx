@@ -22,15 +22,15 @@ export default function Sect3(){
                     </ul>
                 </div>
                 <div className='flex gap-12 flex-wrap text-lightGrey'>
-                    <div>
+                    <div className='flex flex-col items-center'>
                         <h3>Sites rápidos</h3>
                         <img className='w-20' src={clock} alt="Sites rápidos" />
                     </div>
-                    <div>
+                    <div className='flex flex-col items-center'>
                         <h3>Design moderno</h3>
                         <img className='w-20' src={design} alt="Design moderno" />
                     </div>
-                    <div>
+                    <div className='flex flex-col items-center'>
                         <h3>Tecnologia</h3>
                         <img className='w-20' src={technology} alt="Tecnologia" />
                     </div>

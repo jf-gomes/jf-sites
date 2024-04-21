@@ -1,6 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+  plugins: [
+    require('flowbite/plugin')
+  ],
   content: [
+    "./node_modules/flowbite/**/*.js",
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}"
   ],
@@ -30,6 +34,9 @@ export default {
         '780': '780px',
         '1100': '1100px',
         '2400': '2400px'
+      },
+      backgroundImage: {
+        'firstSectionBg': "url('/src/assets/first-sect-bg.jpg')"
       }
     },
   }
