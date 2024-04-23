@@ -25,6 +25,7 @@ export default {
         '12r': '12rem'
       },
       height: {
+        '16r': '16rem',
         '32r': '32rem',
       },
       screens: {

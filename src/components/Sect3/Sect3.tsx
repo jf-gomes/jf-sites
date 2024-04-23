@@ -26,18 +26,22 @@ export default function Sect3(){
     const popovers = [
         {
             id: 0,
+            title: 'Desenvolvimento rápido',
             txt: 'Seu site fica pronto em poucas semanas, sem prejuízos ao seu negócio!'
         },
         {
             id: 1,
+            title: 'Domínio e hospedagem',
             txt: 'Não se preocupe com hospedagem e domínio. Nós resolvemos tudo e te entregamos o site no ar totalmente funcional.'
         },
         {
             id: 2,
+            title: 'Portabilidade',
             txt: 'Seu site funcionará perfeitamente em computadores, notebooks, tablets e celulares.'
         },
         {
             id: 3,
+            title: 'Manutenção',
             txt: 'Em caso de problemas no site, nós realizamos manutenção e ajustes gratuitos por um período de 6 meses.'
         }
     ]
@@ -51,39 +55,17 @@ export default function Sect3(){
                 </div>
                 <div className='flex gap-6 flex-wrap items-center justify-center'>
                     <img className='max-w-80' src={sect3Img} alt="Por que escolher a JF Sites?" />
-                    <ul className='font-bold flex flex-col gap-2'>
-                        <Typography
-                            aria-owns={open ? 'mouse-over-popover' : undefined}
-                            aria-haspopup="true"
-                            onMouseEnter={handlePopoverOpen}
-                            onMouseLeave={handlePopoverClose}
-                        >
-                            <li className='hover:text-pink cursor-pointer' onMouseOver={() => setContent(popovers[0].txt)}>Desenvolvimento rápido</li>
-                        </Typography>
-                        <Typography
-                            aria-owns={open ? 'mouse-over-popover' : undefined}
-                            aria-haspopup="true"
-                            onMouseEnter={handlePopoverOpen}
-                            onMouseLeave={handlePopoverClose}
-                        >
-                            <li className='hover:text-pink cursor-pointer' onMouseOver={() => setContent(popovers[1].txt)}>Domínio e hospedagem</li>
-                        </Typography>
-                        <Typography
-                            aria-owns={open ? 'mouse-over-popover' : undefined}
-                            aria-haspopup="true"
-                            onMouseEnter={handlePopoverOpen}
-                            onMouseLeave={handlePopoverClose}
-                        >
-                            <li className='hover:text-pink cursor-pointer' onMouseOver={() => setContent(popovers[2].txt)}>Portabilidade</li>
-                        </Typography>
-                        <Typography
-                            aria-owns={open ? 'mouse-over-popover' : undefined}
-                            aria-haspopup="true"
-                            onMouseEnter={handlePopoverOpen}
-                            onMouseLeave={handlePopoverClose}
-                        >
-                            <li className='hover:text-pink cursor-pointer' onMouseOver={() => setContent(popovers[3].txt)}>Manutenção</li>
-                        </Typography>
+                    <ul className='font-bold flex flex-col gap-2 text-white text-center'>
+                        {popovers.map((popover) => (
+                            <Typography
+                                aria-owns={open ? 'mouse-over-popover' : undefined}
+                                aria-haspopup="true"
+                                onMouseEnter={handlePopoverOpen}
+                                onMouseLeave={handlePopoverClose}
+                            >
+                                <li className='hover:bg-blue cursor-pointer bg-pink p-2 rounded' onMouseOver={() => setContent(popovers[popover.id].txt)}>{popover.title}</li>
+                            </Typography>
+                        ))}
                     </ul>
                 </div>
                 <div className='flex justify-center gap-12 flex-wrap text-lightGrey'>
@@ -101,7 +83,7 @@ export default function Sect3(){
                     </div>
                 </div>
             </div>
-            <MouseOverPopover anchorEl={anchorEl} handlePopoverClose={handlePopoverClose} handlePopoverOpen={handlePopoverOpen} open={open} content={content} />
+            <MouseOverPopover anchorEl={anchorEl} handlePopoverClose={handlePopoverClose} open={open} content={content} />
         </section>
     )
 }

@@ -1,4 +1,3 @@
-import responsive from '../../assets/responsive.gif'
 import banner1 from '../../assets/banner1.png'
 import banner2 from '../../assets/banner2.png'
 import banner3 from '../../assets/banner3.png'

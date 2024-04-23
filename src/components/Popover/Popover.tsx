@@ -1,16 +1,14 @@
-import * as React from 'react';
 import Popover from '@mui/material/Popover';
 import Typography from '@mui/material/Typography';
 
 interface MouseOverPopoverProps{
     open: boolean,
-    handlePopoverOpen: (event: React.MouseEvent<HTMLElement>) => void,
     handlePopoverClose: () => void,
     anchorEl: HTMLElement | null,
     content: string
 }
 
-export default function MouseOverPopover({ open, handlePopoverClose, handlePopoverOpen, anchorEl, content }: MouseOverPopoverProps) {
+export default function MouseOverPopover({ open, handlePopoverClose, anchorEl, content }: MouseOverPopoverProps) {
 
   return (
     <div>
