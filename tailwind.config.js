@@ -36,7 +36,10 @@ export default {
         '2400': '2400px'
       },
       backgroundImage: {
-        'firstSectionBg': "url('/src/assets/first-sect-bg.jpg')"
+        'firstSectionBg': "url('/src/assets/first-sect-bg.png')"
+      },
+      translate: {
+        'm6': '-6px'
       }
     },
   }
