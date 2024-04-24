@@ -8,8 +8,8 @@ export default function Sect1(){
                 <h2 className="text-xl font-bold text-pink">Deixe conosco!</h2>
                 <p>Na JF Sites, nós desenvolvemos um site profissional e elegante para o seu negócio e te entregamos o site no ar 100% funcional!</p>
                 <div className="flex gap-6">
-                    <Btn content="Faça um orçamento" color="pink" size="large" />
-                    <Btn content="Entre em contato" color="darkBlue" size="large" />
+                    <Btn content="Faça um orçamento" color="pink" size="large" hoverBg="white" />
+                    <Btn content="Entre em contato" color="darkBlue" size="large" hoverBg="white" />
                 </div>
             </div>
         </section>

@@ -31,7 +31,7 @@ export default function TemporaryDrawer() {
   );
 
   return (
-    <header className='sticky top-0 bg-white'>
+    <header className='sticky top-0 bg-white z-10'>
         <div className='flex items-center justify-around'>
             <Button onClick={toggleDrawer(true)}>
                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="black" className="bi bi-list" viewBox="0 0 16 16">
@@ -39,8 +39,8 @@ export default function TemporaryDrawer() {
                 </svg>
             </Button>
             <div className='flex items-center gap-2'>
-              <Btn color='darkBlue' content='Contato' size='small' />
-              <Btn color='pink' content='Orçamento' size='small' />
+              <Btn color='darkBlue' content='Contato' size='small' hoverBg='blue' />
+              <Btn color='pink' content='Orçamento' size='small' hoverBg='blue' />
               <img className='w-20' src={logo} alt="JF Sites" />
             </div>
         </div>
