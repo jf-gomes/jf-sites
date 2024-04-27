@@ -22,7 +22,7 @@ function FormLabel({ label, additionalText, inputName, inputId }: FormLabelProps
                 <label htmlFor="">{ label }</label>
                 <p className='text-xs'>{ additionalText }</p>
             </div>
-            <input className='rounded border-blue' type="text" name={inputName} id={inputId} />
+            <input className='rounded border border-blue p-1' type="text" name={inputName} id={inputId} />
         </div>
     )
 }
@@ -46,7 +46,7 @@ export default function Sect6(){
                 </div>
                 <div className='flex gap-6 items-center justify-center flex-wrap'>
                     <img className='max-w-80' src={formImg} alt="Orçamento" />
-                    <form action="" className="flex flex-col gap-6 items-center">
+                    <form action="" className="flex flex-col gap-6">
                         <FormLabel label='Qual seu nome?' additionalText='Como podemos te chamar?' inputName='name' inputId='name' />
                         <FormLabel label='Qual seu e-mail?' additionalText='Fique tranquilo! Não enviamos spam.' inputName='email' inputId='email' />
                         <FormLabel label='Como você quer o seu site?' additionalText='Descreva brevemente como você gostaria que seu site ficasse.' inputName='description' inputId='description' />
